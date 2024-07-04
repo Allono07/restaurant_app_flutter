@@ -75,6 +75,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.18.1"
   leak_tracker:
     dependency: transitive
     description:
@@ -160,6 +168,30 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  smartech_appinbox:
+    dependency: "direct main"
+    description:
+      name: smartech_appinbox
+      sha256: e5b651fd3676ac0a273a2342e3bf8f2cd9e010a0350fdb3ee8f1b6dcfa54c249
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.5.0"
+  smartech_base:
+    dependency: "direct main"
+    description:
+      name: smartech_base
+      sha256: a2d13961143632e41e0058d5314b3c58c007a564b40ced118ae7f728f5810747
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.5.0"
+  smartech_push:
+    dependency: "direct main"
+    description:
+      name: smartech_push
+      sha256: "91a693a30d2261f651790eb87a5fe61d418ee50b13e88c5be8eb047b1ee36441"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.5.0"
   source_span:
     dependency: transitive
     description:
