@@ -21,6 +21,7 @@ class SettingsPage extends StatelessWidget {
             margin: const EdgeInsets.only(left: 25, top: 10, right: 25),
             padding: const EdgeInsets.all(25),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   "Dark Mode",
