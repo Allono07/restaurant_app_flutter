@@ -256,6 +256,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "14.2.1"
+  webengage_flutter:
+    dependency: "direct main"
+    description:
+      name: webengage_flutter
+      sha256: "9cdaff47035eaa00e30ac9775a7c34c6bbcc8fae9ab5c51225a81152fede9434"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.2"
 sdks:
   dart: ">=3.4.3 <4.0.0"
   flutter: ">=3.18.0-18.0.pre.54"

@@ -1,0 +1,52 @@
+PODS:
+  - Flutter (1.0.0)
+  - Smartech-iOS-SDK (3.5.3)
+  - smartech_appinbox (1.0.0):
+    - Flutter
+    - Smartech-iOS-SDK
+    - SmartechAppInbox-iOS-SDK
+  - smartech_base (1.0.0):
+    - Flutter
+    - Smartech-iOS-SDK
+  - smartech_push (1.0.0):
+    - Flutter
+    - SmartPush-iOS-SDK
+  - SmartechAppInbox-iOS-SDK (3.5.1)
+  - SmartPush-iOS-SDK (3.5.1):
+    - Smartech-iOS-SDK (>= 3.5.3)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - Smartech-iOS-SDK (~> 3.5.3)
+  - smartech_appinbox (from `.symlinks/plugins/smartech_appinbox/ios`)
+  - smartech_base (from `.symlinks/plugins/smartech_base/ios`)
+  - smartech_push (from `.symlinks/plugins/smartech_push/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Smartech-iOS-SDK
+    - SmartechAppInbox-iOS-SDK
+    - SmartPush-iOS-SDK
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  smartech_appinbox:
+    :path: ".symlinks/plugins/smartech_appinbox/ios"
+  smartech_base:
+    :path: ".symlinks/plugins/smartech_base/ios"
+  smartech_push:
+    :path: ".symlinks/plugins/smartech_push/ios"
+
+SPEC CHECKSUMS:
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  Smartech-iOS-SDK: 81069bfc22656c182d2f8deeb89b49534754e373
+  smartech_appinbox: 3532f82f5b48ef368428384fdb394e16b2d015a3
+  smartech_base: 9e2fd9e596518cc7ae850752bfc7abbb7539a8b1
+  smartech_push: 264d63abbf0b40ff72ee2dfb24143d4021235b42
+  SmartechAppInbox-iOS-SDK: 05faabc756c6f7e1ec5065ee75ed63d6a363b57f
+  SmartPush-iOS-SDK: a3a49936fd6936dfa361a822d43e35525b799434
+
+PODFILE CHECKSUM: d0d5973e1d469f44533f46d959748e5a6a6d487f
+
+COCOAPODS: 1.15.2

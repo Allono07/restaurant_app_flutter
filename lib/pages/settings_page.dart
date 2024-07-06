@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:restaurant_app_flutter/themes/theme_provider.dart';
+import 'package:provider/provider.dart'; // Make sure to import the provider package
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -30,8 +32,11 @@ class SettingsPage extends StatelessWidget {
                       color: Theme.of(context).colorScheme.inversePrimary),
                 ),
                 CupertinoSwitch(
-                  value: false,
-                  onChanged: (value) {},
+                  value: Provider.of<ThemeProvider>(context, listen: false)
+                      .isDarkMode,
+                  onChanged: (value) =>
+                      Provider.of<ThemeProvider>(context, listen: false)
+                          .toggleTheme(),
                 )
               ],
             ),

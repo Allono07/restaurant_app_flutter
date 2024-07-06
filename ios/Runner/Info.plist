@@ -45,5 +45,18 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+    
+    <key>SmartechKeys</key>
+      <dict>
+          <key>SmartechAppGroup</key>
+          <string>group.com.CompanyName.ProductName</string>
+          <key>SmartechAppId</key>
+          <string>abcdef123456abcdef123456abcd1234</string>
+          <key>SmartechUseAdvId</key>
+          <true/>
+          <key>SmartechAutoFetchLocation</key>
+          <true/>
+      </dict>
+      
 </dict>
 </plist>

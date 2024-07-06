@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:restaurant_app_flutter/components/my_button.dart';
 import 'package:restaurant_app_flutter/components/my_textfield.dart';
 import 'package:restaurant_app_flutter/pages/home_page.dart';
+import 'package:smartech_base/smartech_base.dart';
 
 class LoginPage extends StatefulWidget {
   final void Function()? onTap;
@@ -79,7 +80,16 @@ class _LoginPageState extends State<LoginPage> {
                 width: 4,
               ),
               GestureDetector(
-                onTap: widget.onTap,
+                onTap: () {
+                  var map = {
+                    "first_name": "ram",
+                    "last_name": "Sharma",
+                    "age": 25
+                  };
+                  Smartech().trackEvent("Add To Cart", map);
+                  print("added to track clicked");
+                  widget.onTap?.call();
+                },
                 child: Text(
                   "Register now",
                   style: TextStyle(
