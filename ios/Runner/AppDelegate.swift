@@ -13,12 +13,12 @@ import UserNotificationsUI
   ) -> Bool {
     GeneratedPluginRegistrant.register(with: self)
      Smartech.sharedInstance().initSDK(with: self, withLaunchOptions: launchOptions)
-      Smartech.sharedInstance().setDebugLevel(.verbose)
+        Smartech.sharedInstance().setDebugLevel(.verbose)
       UNUserNotificationCenter.current().delegate = self
       SmartPush.sharedInstance().registerForPushNotificationWithDefaultAuthorizationOptions()
-
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
+
    override func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
       SmartPush.sharedInstance().didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
     }

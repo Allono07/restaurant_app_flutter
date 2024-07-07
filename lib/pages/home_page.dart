@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:restaurant_app_flutter/components/my_current_location.dart';
@@ -10,6 +9,7 @@ import 'package:restaurant_app_flutter/components/my_tab_bar.dart';
 import 'package:restaurant_app_flutter/model/food.dart';
 import 'package:restaurant_app_flutter/model/restaurant.dart';
 import '../pages/food_page.dart';
+import 'package:smartech_base/smartech_base.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -53,10 +53,19 @@ class _HomePageState extends State<HomePage>
           final food = categoryMenu[index];
           return FoodTile(
               food: food,
-              onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => FoodPage(food: food))));
+              onTap: () {
+                var map = {
+                  'name': food.name,
+                  'description': food.description,
+                  'category': food.category.toString(),
+                };
+                Smartech().trackEvent("item_clicked", map);
+
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => FoodPage(food: food)));
+              });
         },
       );
     }).toList();
@@ -69,24 +78,25 @@ class _HomePageState extends State<HomePage>
       body: NestedScrollView(
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
           MySilverAppBar(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Divider(
-                    indent: 25,
-                    endIndent: 25,
-                    color: Theme.of(context).colorScheme.secondary,
-                  ),
-                  MyCurrentLocation(),
+            title: MyTabBar(
+              tabController: _tabController,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Divider(
+                  indent: 25,
+                  endIndent: 25,
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
+                const MyCurrentLocation(),
 
-                  const MyDescriptionBox()
-                  //current location
-                ],
-              ),
-              title: MyTabBar(
-                tabController: _tabController,
-              )),
+                const MyDescriptionBox()
+                //current location
+              ],
+            ),
+          ),
         ],
         body: Consumer<Restaurant>(
           builder: (context, restaurant, child) => TabBarView(

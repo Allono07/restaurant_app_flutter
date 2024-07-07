@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant_app_flutter/components/my_drawer_tile.dart';
 import 'package:restaurant_app_flutter/pages/settings_page.dart';
+import 'package:restaurant_app_flutter/pages/login_page.dart';
+import 'package:smartech_base/smartech_base.dart';
+import 'package:restaurant_app_flutter/services/auth/auth_service.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
+
+  void logout(context) {
+    final authService = AuthService();
+    authService.signOut();
+    Smartech().logoutAndClearUserIdentity(false);
+
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const LoginPage(onTap: null)),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +54,12 @@ class MyDrawer extends StatelessWidget {
                           builder: (context) => const SettingsPage()));
                 }),
             const Spacer(),
-            MyDrawerTile(text: "L O G O U T", icon: Icons.logout, onTap: () {}),
+            MyDrawerTile(
+                text: "L O G O U T",
+                icon: Icons.logout,
+                onTap: () {
+                  logout(context);
+                }),
             SizedBox(
               height: 25,
             ),

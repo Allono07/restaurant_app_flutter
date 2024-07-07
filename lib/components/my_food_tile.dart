@@ -56,8 +56,8 @@ class FoodTile extends StatelessWidget {
                 Flexible(
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8),
-                    child: Image.asset(
-                      food.imagePath,
+                    child: Image.network(
+                      'https://static.vecteezy.com/system/resources/previews/010/803/444/original/cute-burger-small-cartoon-food-concept-isolated-illustration-flat-cartoon-style-suitable-for-sticker-icon-design-premium-logo-vector.jpg',
                       height: 120, // Set to appropriate size
                       width: 80, // Set to appropriate size
                       fit: BoxFit.cover,
