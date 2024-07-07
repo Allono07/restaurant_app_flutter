@@ -14,6 +14,15 @@ PODS:
   - SmartechAppInbox-iOS-SDK (3.5.1)
   - SmartPush-iOS-SDK (3.5.1):
     - Smartech-iOS-SDK (>= 3.5.3)
+  - WebEngage (6.9.0):
+    - WebEngage/Core (= 6.9.0)
+    - WebEngage/Location (= 6.9.0)
+  - WebEngage/Core (6.9.0)
+  - WebEngage/Location (6.9.0):
+    - WebEngage/Core
+  - webengage_flutter (1.4.2):
+    - Flutter
+    - WebEngage (>= 6.6.1)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
@@ -21,12 +30,15 @@ DEPENDENCIES:
   - smartech_appinbox (from `.symlinks/plugins/smartech_appinbox/ios`)
   - smartech_base (from `.symlinks/plugins/smartech_base/ios`)
   - smartech_push (from `.symlinks/plugins/smartech_push/ios`)
+  - SmartPush-iOS-SDK (~> 3.5.1)
+  - webengage_flutter (from `.symlinks/plugins/webengage_flutter/ios`)
 
 SPEC REPOS:
   trunk:
     - Smartech-iOS-SDK
     - SmartechAppInbox-iOS-SDK
     - SmartPush-iOS-SDK
+    - WebEngage
 
 EXTERNAL SOURCES:
   Flutter:
@@ -37,6 +49,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/smartech_base/ios"
   smartech_push:
     :path: ".symlinks/plugins/smartech_push/ios"
+  webengage_flutter:
+    :path: ".symlinks/plugins/webengage_flutter/ios"
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
@@ -46,7 +60,9 @@ SPEC CHECKSUMS:
   smartech_push: 264d63abbf0b40ff72ee2dfb24143d4021235b42
   SmartechAppInbox-iOS-SDK: 05faabc756c6f7e1ec5065ee75ed63d6a363b57f
   SmartPush-iOS-SDK: a3a49936fd6936dfa361a822d43e35525b799434
+  WebEngage: 301a6547ee912340024115ca731543dda5256fbf
+  webengage_flutter: d0da03ab1db951147d672d8e3835e6f3a2807ddf
 
-PODFILE CHECKSUM: d0d5973e1d469f44533f46d959748e5a6a6d487f
+PODFILE CHECKSUM: 7c70fc49daaec6d797986266d915f3fb0dfa8150
 
 COCOAPODS: 1.15.2
