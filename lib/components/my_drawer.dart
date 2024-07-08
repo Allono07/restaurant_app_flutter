@@ -9,9 +9,9 @@ class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
 
   void logout(context) {
+    Smartech().logoutAndClearUserIdentity(false);
     final authService = AuthService();
     authService.signOut();
-    Smartech().logoutAndClearUserIdentity(false);
 
     Navigator.pushReplacement(
       context,

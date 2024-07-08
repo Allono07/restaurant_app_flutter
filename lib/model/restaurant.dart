@@ -9,7 +9,20 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: Image.network('https://via.placeholder.com/150'),
+      imagePath: "assets/images/burgers/burger1.png",
+      price: 1.00,
+      category: FoodCategory.burgers,
+      availableAddons: [
+        Addon(name: "Extra Chees", price: 0.9),
+        Addon(name: "Olive", price: 0.9),
+        Addon(name: "Avocado", price: 2.9)
+      ],
+    ),
+
+    Food(
+      name: "Class Cheeseburger",
+      description: "A juicy burger",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
       category: FoodCategory.burgers,
       availableAddons: [
@@ -21,7 +34,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/burgers/images.jpeg",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
       category: FoodCategory.burgers,
       availableAddons: [
@@ -33,7 +46,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
       category: FoodCategory.burgers,
       availableAddons: [
@@ -45,19 +58,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
-      price: 1.00,
-      category: FoodCategory.burgers,
-      availableAddons: [
-        Addon(name: "Extra Chees", price: 0.9),
-        Addon(name: "Olive", price: 0.9),
-        Addon(name: "Avocado", price: 2.9)
-      ],
-    ),
-    Food(
-      name: "Class Cheeseburger",
-      description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
       category: FoodCategory.burgers,
       availableAddons: [
@@ -71,7 +72,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
       category: FoodCategory.salads,
       availableAddons: [
@@ -83,7 +84,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
       category: FoodCategory.salads,
       availableAddons: [
@@ -95,19 +96,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
-      price: 1.00,
-      category: FoodCategory.burgers,
-      availableAddons: [
-        Addon(name: "Extra Chees", price: 0.9),
-        Addon(name: "Olive", price: 0.9),
-        Addon(name: "Avocado", price: 2.9)
-      ],
-    ),
-    Food(
-      name: "Class Cheeseburger",
-      description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
       category: FoodCategory.salads,
       availableAddons: [
@@ -119,7 +108,19 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
+      price: 1.00,
+      category: FoodCategory.salads,
+      availableAddons: [
+        Addon(name: "Extra Chees", price: 0.9),
+        Addon(name: "Olive", price: 0.9),
+        Addon(name: "Avocado", price: 2.9)
+      ],
+    ),
+    Food(
+      name: "Class Cheeseburger",
+      description: "A juicy burger",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
       category: FoodCategory.salads,
       availableAddons: [
@@ -133,7 +134,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
       category: FoodCategory.sides,
       availableAddons: [
@@ -145,7 +146,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/burgers/burger.png",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
       category: FoodCategory.sides,
       availableAddons: [
@@ -157,7 +158,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/burgers/images.jpeg",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
       category: FoodCategory.sides,
       availableAddons: [
@@ -169,7 +170,7 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
       category: FoodCategory.sides,
       availableAddons: [
@@ -181,7 +182,19 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
+      price: 1.00,
+      category: FoodCategory.sides,
+      availableAddons: [
+        Addon(name: "Extra Chees", price: 0.9),
+        Addon(name: "Olive", price: 0.9),
+        Addon(name: "Avocado", price: 2.9)
+      ],
+    ),
+    Food(
+      name: "Class Cheeseburger",
+      description: "A juicy burger",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
       category: FoodCategory.sides,
       availableAddons: [
@@ -195,9 +208,9 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
-      category: FoodCategory.burgers,
+      category: FoodCategory.desserts,
       availableAddons: [
         Addon(name: "Extra Chees", price: 0.9),
         Addon(name: "Olive", price: 0.9),
@@ -207,9 +220,9 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
-      category: FoodCategory.burgers,
+      category: FoodCategory.desserts,
       availableAddons: [
         Addon(name: "Extra Chees", price: 0.9),
         Addon(name: "Olive", price: 0.9),
@@ -219,9 +232,9 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
-      category: FoodCategory.burgers,
+      category: FoodCategory.desserts,
       availableAddons: [
         Addon(name: "Extra Chees", price: 0.9),
         Addon(name: "Olive", price: 0.9),
@@ -231,9 +244,9 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
-      category: FoodCategory.burgers,
+      category: FoodCategory.desserts,
       availableAddons: [
         Addon(name: "Extra Chees", price: 0.9),
         Addon(name: "Olive", price: 0.9),
@@ -243,9 +256,9 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
-      category: FoodCategory.burgers,
+      category: FoodCategory.desserts,
       availableAddons: [
         Addon(name: "Extra Chees", price: 0.9),
         Addon(name: "Olive", price: 0.9),
@@ -257,9 +270,9 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
-      category: FoodCategory.burgers,
+      category: FoodCategory.drinks,
       availableAddons: [
         Addon(name: "Extra Chees", price: 0.9),
         Addon(name: "Olive", price: 0.9),
@@ -269,9 +282,9 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
-      category: FoodCategory.burgers,
+      category: FoodCategory.drinks,
       availableAddons: [
         Addon(name: "Extra Chees", price: 0.9),
         Addon(name: "Olive", price: 0.9),
@@ -281,9 +294,9 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
-      category: FoodCategory.burgers,
+      category: FoodCategory.drinks,
       availableAddons: [
         Addon(name: "Extra Chees", price: 0.9),
         Addon(name: "Olive", price: 0.9),
@@ -293,9 +306,9 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
-      category: FoodCategory.burgers,
+      category: FoodCategory.drinks,
       availableAddons: [
         Addon(name: "Extra Chees", price: 0.9),
         Addon(name: "Olive", price: 0.9),
@@ -305,9 +318,9 @@ class Restaurant extends ChangeNotifier {
     Food(
       name: "Class Cheeseburger",
       description: "A juicy burger",
-      imagePath: "lib/images/bugers",
+      imagePath: "assets/images/burgers/burger1.png",
       price: 1.00,
-      category: FoodCategory.burgers,
+      category: FoodCategory.drinks,
       availableAddons: [
         Addon(name: "Extra Chees", price: 0.9),
         Addon(name: "Olive", price: 0.9),
@@ -336,11 +349,12 @@ class Restaurant extends ChangeNotifier {
 
     //pthers, adda new cart
     else {
-      CartItem(
+      _cart.add(CartItem(
         food: food,
         selectedAddons: selectAddons,
-      );
+      ));
     }
+    notifyListeners();
   }
 
   void removeFrom(CartItem cartItem) {

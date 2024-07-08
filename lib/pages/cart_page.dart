@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_app_flutter/components/my_cart_tile.dart';
 import 'package:restaurant_app_flutter/model/restaurant.dart';
 import 'package:provider/provider.dart';
 
@@ -11,10 +12,30 @@ class CartPage extends StatelessWidget {
       final userCart = restaurant.cart;
 
       return Scaffold(
-        appBar: AppBar(
-          title: Text("Cart"),
-        ),
-      );
+          appBar: AppBar(
+            title: const Text("Cart"),
+            backgroundColor: Colors.transparent,
+            foregroundColor: Theme.of(context).colorScheme.inversePrimary,
+          ),
+          body: Column(
+            children: [
+              Expanded(
+                child: ListView.builder(
+                    itemCount: userCart.length,
+                    itemBuilder: (context, index) => ListTile(
+                          title: Text(userCart[index].food.name),
+                        )
+                    //     {
+                    //   final cartItem = userCart[index];
+                    //   return ListTile(
+                    //     title: Text(cartItem.food.name),
+                    //   );
+                    //   //return MyCartTile(cartItem: cartItem);
+                    // }
+                    ),
+              )
+            ],
+          ));
     });
   }
 }

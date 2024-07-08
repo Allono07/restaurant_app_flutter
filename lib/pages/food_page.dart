@@ -22,7 +22,6 @@ class FoodPage extends StatefulWidget {
 
 class _FoodPageState extends State<FoodPage> {
   void addToCart(Food food, Map<Addon, bool> selectedAddons) {
-    Navigator.pop(context);
     List<Addon> currentlySelectedAddons = [];
     for (Addon addon in widget.food.availableAddons) {
       if (widget.selectedAddons[addon] == true) {
@@ -30,6 +29,7 @@ class _FoodPageState extends State<FoodPage> {
       }
     }
     context.read<Restaurant>().addToCart(food, currentlySelectedAddons);
+    Navigator.pop(context);
   }
 
   @override
@@ -126,8 +126,8 @@ class _FoodPageState extends State<FoodPage> {
                     text: "Add to Cart",
                     onTap: () {
                       addToCart(widget.food, widget.selectedAddons);
-                      var map = {"name": widget.food.name};
-                      Smartech().trackEvent("add_to_cart", map);
+                      // var map = {"name": widget.food.name};
+                      // Smartech().trackEvent("add_to_cart", map);
                     }),
                 const SizedBox(
                   height: 25,

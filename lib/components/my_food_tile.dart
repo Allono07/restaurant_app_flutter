@@ -33,7 +33,7 @@ class FoodTile extends StatelessWidget {
                     Text(
                       '\$' + food.price.toString(),
                       style: TextStyle(
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Theme.of(context).colorScheme.inversePrimary,
                       ),
                       overflow: TextOverflow.ellipsis, // Handle overflow
                       maxLines: 1, // Limit to one line
@@ -44,7 +44,7 @@ class FoodTile extends StatelessWidget {
                     Text(
                       food.description,
                       style: TextStyle(
-                          color: Theme.of(context).colorScheme.primary),
+                          color: Theme.of(context).colorScheme.inversePrimary),
                       overflow: TextOverflow.ellipsis, // Handle overflow
                       maxLines: 2,
                     )
@@ -56,11 +56,10 @@ class FoodTile extends StatelessWidget {
                 Flexible(
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8),
-                    child: Image.network(
-                      'https://static.vecteezy.com/system/resources/previews/010/803/444/original/cute-burger-small-cartoon-food-concept-isolated-illustration-flat-cartoon-style-suitable-for-sticker-icon-design-premium-logo-vector.jpg',
+                    child: Image.asset(
+                      food.imagePath,
                       height: 120, // Set to appropriate size
-                      width: 80, // Set to appropriate size
-                      fit: BoxFit.cover,
+                      // Set to appropriate size
                     ),
                   ),
                 )

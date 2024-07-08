@@ -1,7 +1,7 @@
 class Food {
   final String name;
   final String description;
-  final dynamic imagePath;
+  final String imagePath;
   final double price;
   final FoodCategory category;
   List<Addon> availableAddons;
