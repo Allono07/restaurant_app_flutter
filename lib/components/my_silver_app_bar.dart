@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:smartech_base/smartech_base.dart';
 import 'package:restaurant_app_flutter/pages/cart_page.dart';
 
 class MySilverAppBar extends StatelessWidget {
@@ -17,6 +18,7 @@ class MySilverAppBar extends StatelessWidget {
       actions: [
         IconButton(
             onPressed: () {
+              Smartech().trackEvent("cart_clicked", {});
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const CartPage()));
             },

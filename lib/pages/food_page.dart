@@ -126,6 +126,7 @@ class _FoodPageState extends State<FoodPage> {
                     text: "Add to Cart",
                     onTap: () {
                       addToCart(widget.food, widget.selectedAddons);
+
                       // var map = {"name": widget.food.name};
                       // Smartech().trackEvent("add_to_cart", map);
                     }),

@@ -58,6 +58,7 @@ class MyDrawer extends StatelessWidget {
                 text: "L O G O U T",
                 icon: Icons.logout,
                 onTap: () {
+                  // Smartech().logoutAndClearUserIdentity(true);
                   logout(context);
                 }),
             SizedBox(
