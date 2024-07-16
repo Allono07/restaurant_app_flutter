@@ -34,7 +34,9 @@ class MyCartTile extends StatelessWidget {
                             width: 100,
                           ),
                         ),
-
+                        const SizedBox(
+                          width: 10,
+                        ),
                         Column(
                           children: [
                             Text(cartItem.food.name),
@@ -42,25 +44,26 @@ class MyCartTile extends StatelessWidget {
                               '\$' + cartItem.food.price.toString(),
                               style: TextStyle(
                                   color: Theme.of(context).colorScheme.primary),
-                            )
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            QuantitySelector(
+                                quantity: cartItem.quantity,
+                                food: cartItem.food,
+                                onIncrement: () {
+                                  restaurant.addToCart(
+                                      cartItem.food, cartItem.selectedAddons);
+                                },
+                                onDecrement: () {
+                                  restaurant.removeFrom(cartItem);
+                                }),
                           ],
                         ),
 
-                        const Spacer(),
                         //image and price
 
                         //increment and decrement quantity
-
-                        QuantitySelector(
-                            quantity: cartItem.quantity,
-                            food: cartItem.food,
-                            onIncrement: () {
-                              restaurant.addToCart(
-                                  cartItem.food, cartItem.selectedAddons);
-                            },
-                            onDecrement: () {
-                              restaurant.removeFrom(cartItem);
-                            }),
                       ],
                     ),
                   ),

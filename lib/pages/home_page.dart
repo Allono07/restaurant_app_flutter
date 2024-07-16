@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage>
                   endIndent: 25,
                   color: Theme.of(context).colorScheme.secondary,
                 ),
-                const MyCurrentLocation(),
+                MyCurrentLocation(),
 
                 const MyDescriptionBox()
                 //current location

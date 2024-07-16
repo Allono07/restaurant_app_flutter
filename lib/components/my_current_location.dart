@@ -1,27 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:restaurant_app_flutter/model/restaurant.dart';
 
 class MyCurrentLocation extends StatelessWidget {
-  const MyCurrentLocation({super.key});
+  MyCurrentLocation({super.key});
+  final TextEditingController textController = TextEditingController();
 
   void openLocationSearchBox(BuildContext context) {
     showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-              title: const Text("Your location"),
-              content: const TextField(
-                decoration: const InputDecoration(hintText: "Search address.."),
-              ),
-              actions: [
-                MaterialButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: const Text('Cancel'),
-                ),
-                MaterialButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: const Text('Save'),
-                )
-              ],
-            ));
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text("Your location"),
+        content: TextField(
+          controller: textController,
+          decoration: const InputDecoration(hintText: "Search address.."),
+        ),
+        actions: [
+          MaterialButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Cancel'),
+          ),
+          MaterialButton(
+            onPressed: () {
+              String newAddress = textController.text;
+              context.read<Restaurant>().updateDeliveryAddress(newAddress);
+              Navigator.pop(context);
+              textController.clear();
+            },
+            child: const Text('Save'),
+          )
+        ],
+      ),
+    );
   }
 
   @override
@@ -39,10 +49,15 @@ class MyCurrentLocation extends StatelessWidget {
             onTap: () => openLocationSearchBox(context),
             child: Row(
               children: [
-                Text("560029 Bangalore SG PAL",
+                Consumer<Restaurant>(
+                  builder: (context, restaurant, child) => Text(
+                    restaurant.deliveryAddress,
                     style: TextStyle(
-                        color: Theme.of(context).colorScheme.inversePrimary,
-                        fontWeight: FontWeight.bold)),
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
                 Icon(Icons.keyboard_arrow_down_rounded)
               ],
             ),
